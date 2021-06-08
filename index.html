@@ -25,7 +25,7 @@
             <li class="control__item"><a class="control__link" href="#">Log In</a></li>
             <li class="control__item"><a class="control__link control__link-bg" href="#">Sign Up</a></li>
         </ul>
-        <button class="menu" type="button">
+        <button class="menu" type="button" data-modal-target="#modal">
             <span class="menu-item"></span>
             <span class="menu-item"></span>
             <span class="menu-item"></span>
@@ -357,5 +357,54 @@
             </div>
         </div>
     </footer>
+    <div class="modal" id="modal">
+        <button data-close-button class="close-button">&times;</button>
+        <ul class="nav">
+            <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Workspace</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Service</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Reviews</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Contact Us</a></li>
+        </ul>
+        <ul class="control">
+            <li class="control__item"><a class="control__link" href="#">Log In</a></li>
+            <li class="control__item"><a class="control__link control__link-bg" href="#">Sign Up</a></li>
+        </ul>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        const openModalButtons = document.querySelectorAll('[data-modal-target]')
+        const closeModalButtons = document.querySelectorAll('[data-close-button]')
+        const overlay = document.getElementById('overlay')
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = document.querySelector(button.dataset.modalTarget)
+                openModal(modal)
+            })
+        })
+            overlay.addEventListener('click', () => {
+                const modals = document.querySelectorAll('.modal.active')
+                modals.forEach(modal => {
+                closeModal(modal)
+            })
+        })
+        closeModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                const modal = button.closest('.modal')
+                closeModal(modal)
+            })
+        })
+        function openModal(modal) {
+            if (modal == null) return
+            modal.classList.add('active')
+            overlay.classList.add('active')
+        }
+        function closeModal(modal) {
+            if (modal == null) return
+            modal.classList.remove('active')
+            overlay.classList.remove('active')
+        }
+    </script>
 </body>
 </html>

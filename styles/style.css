@@ -721,6 +721,52 @@ footer {
     color: #FFFFFF;
     text-decoration: none;
 }
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    padding: 30px 20px;
+}
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 39px;
+    font-weight: 400;
+    position: absolute;
+    padding: 0;
+    right: 11px;
+    top: 0;
+}
+.modal-body {
+    padding: 10px 15px;
+}
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
 @media (min-width: 871px) {
     .menu {
         display: none;
@@ -763,6 +809,18 @@ footer {
     nav,
     .control {
         display: none;
+    }
+    .modal .control {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .modal .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .modal .nav__item {
+        margin-bottom: 20px;
     }
     .menu {
         background-color: #FFFFFF;
@@ -948,7 +1006,7 @@ footer {
         flex: 0 0 100%;
         font-size: 16px
     }
-    .page-member {;
+    .page-member {
         padding-top: 40px;
         padding-bottom: 50px;
     }
@@ -997,6 +1055,14 @@ footer {
     }
     .form__btn {
         font-size: 15px;
+    }
+    .modal .control {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 12px;
+    }
+    .control__link {
+        display: block;
     }
     .page-main {
         padding-bottom: 0;
