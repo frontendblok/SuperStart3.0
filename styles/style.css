@@ -164,7 +164,7 @@ header {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-image: url(/images/arrow.svg);
+    background-image: url(../images/arrow.svg);
     background-size: 24px 24px;
     background-repeat: no-repeat;
     background-position: 96% center;
@@ -217,7 +217,7 @@ header {
     display: inline-block;
     width: 32px;
     height: 32px;
-    background-image: url(/images/arrow-link.svg);
+    background-image: url(../images/arrow-link.svg);
     background-size: 32px 32px;
     vertical-align: middle;
     margin-left: 10px;
@@ -251,7 +251,7 @@ header {
     width: 72px;
     height: 72px;
     background-color: #FF5722;
-    background-image: url(/images/arrow-btn.svg);
+    background-image: url(../images/arrow-btn.svg);
     background-size: 32px 32px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -284,7 +284,7 @@ header {
     justify-content: center;
     padding: 25px;
     box-sizing: border-box;
-    background-image: url(/images/lines.svg);
+    background-image: url(../images/lines.svg);
     background-size: 90px 90px;
     background-position: 94% 16px;
     background-repeat: no-repeat;
@@ -311,7 +311,7 @@ header {
     display: block;
     padding: 25px 73px 25px 55px;
     background-color: #FF5722;
-    background-image: url(/images/arrow-btn.svg);
+    background-image: url(../images/arrow-btn.svg);
     background-size: 32px 32px;
     background-repeat: no-repeat;
     background-position: 91% center;
@@ -388,22 +388,22 @@ header {
     background-position: center center;
 }
 ._rooms .about-item__h3::before {
-    background-image: url(/images/icon01.svg);
+    background-image: url(../images/icon01.svg);
 }
 ._communities .about-item__h3::before {
-    background-image: url(/images/icon02.svg);
+    background-image: url(../images/icon02.svg);
 }
 ._countries .about-item__h3::before {
-    background-image: url(/images/icon03.svg);
+    background-image: url(../images/icon03.svg);
 }
 ._wifi .about-item__h3::before {
-    background-image: url(/images/icon04.svg);
+    background-image: url(../images/icon04.svg);
 }
 ._startup .about-item__h3::before {
-    background-image: url(/images/icon05.svg);
+    background-image: url(../images/icon05.svg);
 }
 ._events .about-item__h3::before {
-    background-image: url(/images/icon06.svg);
+    background-image: url(../images/icon06.svg);
 }
 .about-item__h3 span {
     display: block;
@@ -469,7 +469,7 @@ header {
     width: 64px;
     height: 48px;
     background-color: #FF5722;
-    background-image: url(/images/arrow-down.svg);
+    background-image: url(../images/arrow-down.svg);
     background-size: 32px 32px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -486,7 +486,7 @@ header {
 }
 .help-item:hover .help__link {
     background-color: #FFFFFF;
-    background-image: url(/images/arrow-down-hover.svg);
+    background-image: url(../images/arrow-down-hover.svg);
 }
 .page-blog {
     padding-top: 27px;
